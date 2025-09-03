@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Projects Section */
+    #projects {
+      padding: 60px 20px;
+      background: #f9f9f9;
+      text-align: center;
+    }
+
+    #projects h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #333;
+      position: relative;
+      display: inline-block;
+    }
+
+    #projects h2::after {
+      content: "";
+      width: 60%;
+      height: 3px;
+      background: #ffd700;
+      display: block;
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .project {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: left;
+    }
+
+    .project img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project h3 {
+      font-size: 1.5rem;
+      margin: 15px 20px 10px;
+      color: #222;
+    }
+
+    .project p {
+      font-size: 1rem;
+      color: #555;
+      margin: 0 20px 20px;
+      line-height: 1.6;
+    }
+
+    .project:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsive text */
+    @media (max-width: 600px) {
+      #projects h2 {
+        font-size: 2rem;
+      }
+
+      .project h3 {
+        font-size: 1.3rem;
+      }
+
+      .project p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">MyPortfolio</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skill.html">Skills</a></li>
+      <li><a href="Projecs.html">Projects</a></li>
+      <li><a href="ContactUs.html">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn">Hire Me</a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+      <div class="project">
+        <img src="images/cover.jpg" alt="Project 1">
+        <h3>Portfolio Website</h3>
+        <p>
+          Hello! I’m Shivam, a passionate Web Developer, SEO Specialist, and Programmer.  
+          I build modern, responsive, and optimized websites.  
+          Skills: HTML, CSS, JavaScript, SEO, MySQL, C, C++, Java.
+        </p>
+      </div>
+
+      <div class="project">
+        <img src="images/Tour Website.jpg" alt="Project 2">
+        <h3>Tour Website</h3>
+        <p>
+          A travel site highlighting Manali, Rishikesh, and Youthing.  
+          Focused on showcasing adventure, spirituality, and nature.  
+          Designed with responsive layouts for an engaging experience.
+        </p>
+      </div>
+
+      <div class="project">
+        <img src="images/rock-Paper-Scissors.jpg" alt="Project 3">
+        <h3>Rock-Paper-Scissors Game</h3>
+        <p>
+          A simple game built with HTML, CSS & JavaScript.  
+          Features real-time interaction, DOM manipulation, and instant results.  
+          A great project for learning event handling and game logic.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

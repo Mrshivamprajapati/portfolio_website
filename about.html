@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shivam About</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* General Reset */
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* Banner Section */
+    .banner {
+      height: 70vh;
+      background: url("images/banner.png") no-repeat center center/cover;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .banner .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .banner-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .banner-content h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .banner-content h1 span {
+      color: #ffd700;
+    }
+
+    .banner-content p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 10px 22px;
+      background: linear-gradient(135deg, #6C63FF, #4A47A3);
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #4A47A3, #6C63FF);
+      transform: scale(1.05);
+    }
+
+    /* About Section */
+    #about {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    #about h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      position: relative;
+      color: #222;
+    }
+
+    #about h2::after {
+      content: "";
+      width: 70px;
+      height: 3px;
+      background: #ffd700;
+      display: block;
+      margin: 10px auto;
+      border-radius: 2px;
+    }
+
+    .about-container {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .about-img {
+      flex: 1;
+      text-align: center;
+    }
+
+    .about-img img {
+      width: 300px;
+      border-radius: 50%;
+      box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .about-text {
+      flex: 2;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .about-details {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .about-details div {
+      flex: 1;
+    }
+
+    .about-details h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #6C63FF;
+    }
+
+    .about-details ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .about-details ul li {
+      margin-bottom: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-text {
+        flex: 1;
+      }
+
+      .about-details {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">MyPortfolio</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="skill.html">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn">Hire Me</a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <!-- Banner -->
+  <header class="banner">
+    <div class="overlay"></div>
+    <div class="banner-content">
+      <h1>About <span>Me</span></h1>
+      <p>Discover my journey, education, and passions</p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>Who I Am</h2>
+    <div class="about-container">
+      <!-- Image -->
+      <div class="about-img">
+        <img src="images/cover.jpg" alt="Shivam Photo">
+      </div>
+
+      <!-- Text -->
+      <div class="about-text">
+        <p>
+          Hello! My name is <strong>Shivam</strong>, and I come from a small village named <strong>Barihar</strong> in
+          the <strong>Mainpuri district</strong> of Uttar Pradesh.  
+          I started my educational journey in a government school in my hometown, which helped me build a strong
+          foundation.
+        </p>
+        <p>
+          To continue higher studies, I moved to Delhi where I completed my <strong>Diploma in Engineering</strong> at
+          ACMT Group of Colleges. Currently, I am pursuing my <strong>B.Tech at HRIT University, Ghaziabad</strong>.
+        </p>
+        <p>
+          I’m passionate about <strong>Web Development, Digital Marketing, and SEO</strong>.  
+          My goal is to create impactful projects, grow my technical expertise, and contribute to innovative solutions.
+        </p>
+
+        <div class="about-details">
+          <div>
+            <h3>Education</h3>
+            <ul>
+              <li>Diploma - ACMT Group of Colleges, Delhi</li>
+              <li>B.Tech - HRIT University, Ghaziabad</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Skills</h3>
+            <ul>
+              <li>Web Development (HTML, CSS, JS)</li>
+              <li>SEO & Digital Marketing</li>
+              <li>Programming (C, C++, Java)</li>
+              <li>Database (MySQL)</li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="https://www.canva.com/design/DAGxhiuwgD0/G4f3yWs49-PCct-vR-kIag/edit?utm_content=DAGxhiuwgD0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn" target="_blank">Download CV</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

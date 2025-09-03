@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="">
+  <style>
+    /* Banner Section */
+    .banner {
+      height: 80vh;
+      background: url("images/banner.png") no-repeat center center/cover;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .banner .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .banner-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .banner-content h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .banner-content h1 span {
+      color: #ffd700;
+    }
+
+    .banner-content p {
+      font-size: 1.3rem;
+      margin-bottom: 25px;
+    }
+
+    .banner-content .btn {
+      padding: 8px 18px;
+      background: linear-gradient(135deg, #6C63FF, #4A47A3);
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #4A47A3, #6C63FF);
+      transform: scale(1.05);
+    }
+
+    /* Contact Section */
+    #contact {
+      padding: 60px 20px;
+      background: #f4f4f4;
+    }
+
+    #contact h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .contact-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1000px;
+      margin: auto;
+      gap: 40px;
+    }
+
+    /* Left form */
+    .contact-form {
+      flex: 1;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+     padding: 8px 18px;
+      background: linear-gradient(135deg, #6C63FF, #4A47A3);
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: linear-gradient(135deg, #4A47A3, #6C63FF);
+      transform: scale(1.05);
+    }
+
+    /* Right info */
+    .contact-info {
+      flex: 1;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-info h3 {
+      margin-bottom: 15px;
+    }
+
+    .contact-info p {
+      margin: 12px 0;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Icons */
+    .contact-info i {
+      color: #ffd700;
+      font-size: 1.2rem;
+      width: 25px;
+      text-align: center;
+    }
+
+    .social-links {
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin-right: 15px;
+      font-size: 1.5rem;
+      color: #111;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #ffd700;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">MyPortfolio</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skill.html">Skills</a></li>
+      <li><a href="Projecs.html">Projects</a></li>
+      <li><a href="ContactUs.html">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn">Hire Me</a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <!-- Banner -->
+  <header class="banner">
+    <div class="overlay"></div>
+    <div class="banner-content">
+      <h1>Hi, I'm <span>Shivam</span></h1>
+      <p>Web Developer • Digital Marketer • SEO Specialist</p>
+      <a href="#contact" class="btn">Hire Me</a>
+    </div>
+  </header>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-container">
+      <!-- Left form -->
+      <div class="contact-form">
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Right info -->
+      <div class="contact-info">
+        <h3>My Contact Info</h3>
+        <p><i class="fa-solid fa-user"></i> Shivam Prajapati</p>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+918533973032">+91 85339 73032</a></p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:mrshivamp@gmail.com">mrshivamprajapati566@gmail.com</a></p>
+
+        <div class="social-links">
+          <h3>Follow Me</h3>
+          <a href="https://www.instagram.com/shivamhelpcode/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@shivamHelpCode-1" target="_blank"><i
+              class="fab fa-youtube"></i></a>
+          <a href="https://www.linkedin.com/in/shivam-prajapati-4273282a7/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
